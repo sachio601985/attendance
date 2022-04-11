@@ -624,7 +624,7 @@ select {
   margin-right: auto;
 }
 .ml-3 {
-  margin-left: 0.75rem;
+  margin-left: 0rem;
 }
 .-ml-px {
   margin-left: -1px;
@@ -790,7 +790,7 @@ select {
   align-items: center;
 }
 .justify-end {
-  justify-content: flex-end;
+  justify-content:end ;
 }
 .justify-center {
   justify-content: center;
@@ -1387,3 +1387,13 @@ select {
   }
 }
 
+.register-text {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: center;
+  
+}
+.header_style{
+  font-size: 150%;
+  font-weight:bold;
+}
