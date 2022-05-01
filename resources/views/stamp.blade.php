@@ -3,47 +3,51 @@
     <div class="header_title">atte</div>
 </div>
 
-    <x-auth-card>
+
    <x-slot name="logo">
             <a href="/">
 <p class="header_style">福場凛太郎さんお疲れ様です</p>
             </a>
 </x-slot>
-
-        <!-- Validation Errors -->
+<div class="outer_button">
+        <!-- 打刻ボタン -->
+  <div class="inner_top">
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-        <form method="POST" action="{{ route('register') }}">
+        <form method="GET" action="{{ route('startAttendance') }}">
             @csrf
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                
-                <x-input id="email" class="block mt-1 w-full tesst" type="email" name="email" :value="old('email')" required autofocus placeholder="メールアドレス"/>
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autofocus placeholder="パスワード"/>
-            </div>
-
-
-            <div class="block">
-                <x-button class="block mt-4 register-text w-full">
-                    {{ __('ログイン') }}
+            <div class="block_inline">
+                <x-button class="bottom-text">
+                    {{ __('勤務開始') }}
                 </x-button>
-</div>
-            <div class="inner_login">
-<p class="">アカウントをお持ちの方はこちら</p>
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('会員登録') }}
-                </a>
             </div>
         </form>
-    </x-auth-card>
+
+        <form method="GET" action="{{ route('login') }}">
+            <div class="block_inline">
+                <x-button class="bottom-text">
+                    {{ __('勤務終了') }}
+                </x-button>
+            </div>
+</form>
+  </div><!-- inner_top -->
+
+  <div class="inner_bottom">
+            <div class="block_inline">
+                <x-button class="bottom-text">
+                    {{ __('休憩開始') }}
+                </x-button>
+            </div>
+
+            <div class="block_inline">
+                <x-button class="bottom-text">
+                    {{ __('休憩終了') }}
+                </x-button>
+            </div>
+        </form>
+</div>
+</div><!-- outer_button -->
+
 <div class="footer">
     <p class="footer_line">atte,inc.</p>
 </div>

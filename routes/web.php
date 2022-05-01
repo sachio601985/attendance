@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\attendanceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/stamp', function () {
+Route::get('/attendance', function () {
     return view('stamp');
 });
 
@@ -26,3 +26,6 @@ require __DIR__.'/auth.php';
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/attendance/start', [attendanceController::class, 'startAttendance'])->name('startAttendance');
+

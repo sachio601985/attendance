@@ -1414,10 +1414,32 @@ height: end;
   text-align: center;
 }
 
-
-
 .footer_line {
 text-align: center;
 font-weight:bold;
 margin: 10px 0 ;
+}
+
+
+/*打刻ページCSS*/
+.block_inline{
+display: inline-block;
+}
+.bottom-text{
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  width: 300px;
+  padding-left: 45%;
+  background-color: #2563eb;
+}
+.outer_button{
+width: 1000px;
+}
+
+.inner_top{
+
+}
+
+.inner_bottom{
+
 }
