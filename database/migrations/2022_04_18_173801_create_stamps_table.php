@@ -17,8 +17,8 @@ class CreateStampsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->date('work_date');
-            $table->dateTime('work_start_time', $precision = 0);
-            $table->dateTime('work_end_time', $precision = 0);
+            $table->time('work_start_time', $precision = 0)->nullable();
+            $table->time('work_end_time', $precision = 0)->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

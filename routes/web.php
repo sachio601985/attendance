@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\attendanceController;
+use App\Http\Controllers\AttendanceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,5 +27,5 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/attendance/start', [attendanceController::class, 'startAttendance'])->name('startAttendance');
+Route::get('/attendance/start', [AttendanceController::class, 'startAttendance'])->name('startAttendance');
 
