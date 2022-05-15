@@ -43,6 +43,7 @@ html {
 body {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
+    background-color: #fffbdc;
 }
 
 /*
@@ -1391,6 +1392,7 @@ select {
 .header_style {
   font-size: 150%;
   font-weight: bold;
+
 }
 
 .register-text {
@@ -1402,7 +1404,9 @@ select {
 
 .header {
 height: end;
+background-color: #fffbdc;
 }
+
 .header_title{
   display: inline-block;
   font-size: 40px;
@@ -1414,6 +1418,7 @@ height: end;
   text-align: center;
 }
 
+
 .footer_line {
 text-align: center;
 font-weight:bold;
@@ -1422,7 +1427,7 @@ margin: 10px 0 ;
 
 
 /*打刻ページCSS*/
-.block_inline{
+.inline-block{
 display: inline-block;
 }
 .bottom-text{
@@ -1432,14 +1437,28 @@ display: inline-block;
   padding-left: 45%;
   background-color: #2563eb;
 }
-.outer_button{
-width: 1000px;
+
+
+.inner_grid{
+  display: grid;
+  grid-template-rows:100px 100px;
+  grid-template-columns:1fr 1fr;
 }
 
-.inner_top{
-
+.box01{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.box02{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.box03{
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.box04{
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
-.inner_bottom{
-
-}
