@@ -1694,6 +1694,7 @@ select {
 .header {
   height: end;
   background-color: #fffbdc;
+
 }
 
 .header_title {
@@ -1716,23 +1717,30 @@ select {
 
 
 /*打刻ページCSS*/
+.wrapper_stamp{
+
+text-align: center;
+}
+.outer_button{
+
+}
+
 .inline-block {
   display: inline-block;
 }
-
-.bottom-text {
-  font-size: 0.75rem;
-  line-height: 1.5rem;
-  width: 300px;
-  padding-left: 45%;
-  background-color: #2563eb;
-}
-
 
 .inner_grid {
   display: grid;
   grid-template-rows: 100px 100px;
   grid-template-columns: 1fr 1fr;
+}
+.bottom-text-d{
+  font-size: 0.75rem;
+    line-height: 1.5rem;
+    width: 500px;
+    height: 100px;
+    background-color: #ffeccf;
+    color: #000000;
 }
 
 .box01 {
