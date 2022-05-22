@@ -14,7 +14,7 @@
 
       <div class="inner_grid">
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-        <form class="test" method="GET" action="{{ route('startAttendance') }}">
+        <form method="GET" action="{{ route('startAttendance') }}">
             @csrf
 
             <div class="inline-block box01">
@@ -24,7 +24,7 @@
             </div>
         </form>
 
-        <form method="GET" action="{{ route('login') }}">
+        <form method="GET" action="{{ route('endAttendance') }}">
             <div class="inline-block box02">
                 <x-button class="bottom-text-d">
                     {{ __('勤務終了') }}

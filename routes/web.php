@@ -29,3 +29,4 @@ Route::get('/dashboard', function () {
 
 Route::get('/attendance/start', [AttendanceController::class, 'startAttendance'])->name('startAttendance');
 
+Route::get('/attendance/end', [AttendanceController::class, 'endAttendance'])->name('endAttendance');
