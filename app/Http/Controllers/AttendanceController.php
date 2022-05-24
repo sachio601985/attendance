@@ -19,8 +19,7 @@ class AttendanceController extends Controller
     {
     $dt = new Carbon();//現在の日付時刻をとる
     $date = $dt->toDateString();//現在の日付を文字列にしている
-
-        $time = $dt->toTimeString();//時間を文字列にしている
+    $time = $dt->toTimeString();//時間を文字列にしている
 
     stamps::create([
         'user_id' => 1,
@@ -31,15 +30,16 @@ class AttendanceController extends Controller
     return view('stamp');
     }
 
-            public function endAttendance(Request $request)
+
+
+
+
+public function endAttendance(Request $request)
     {
         $form = $request->all();
     $dt = new Carbon();//現在の日付時刻をとる
     $date = $dt->toDateString();//現在の日付を文字列にしている
-
-        $time = $dt->toTimeString();//時間を文字列にしている
-
-
+    $time = $dt->toTimeString();//時間を文字列にしている
 
     stamps::where('id', $request->id)->update($form);
 
