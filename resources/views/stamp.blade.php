@@ -33,7 +33,6 @@
 </form>
 
 
-
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
         <form method="GET" action="{{ route('startAttendance') }}">
             @csrf

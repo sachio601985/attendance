@@ -41,7 +41,7 @@ public function endAttendance(Request $request)
     $date = $dt->toDateString();//現在の日付を文字列にしている
     $time = $dt->toTimeString();//時間を文字列にしている
 
-    stamps::where('id', $request->id)->update($form);
+    stamps::where('id', $request->id)->where('work_date')->update($form);
 
     return view('stamp');
     }
